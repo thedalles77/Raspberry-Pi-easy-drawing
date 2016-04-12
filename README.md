@@ -1,9 +1,9 @@
 Raspberry Pi easy drawing with c and cairo
 
-It provides a simple framework for basic drawing with cairo and gtk+ 3.0
+Provides a simple framework for basic drawing with cairo and gtk+ 3.0
 
 All gtk+ functions are hidden away in main.c
-Therefor no knowledge abut gtk+ is required
+No knowledge about gtk+ is required
 You can concentrate on writing your own cairo drawing in application.c
 Just replace the simple example with your own code
 
@@ -14,7 +14,7 @@ The framework provides functions to
  * draw using cairo
  * initialize your code
  * exit your code
- * a peridicaly called function
+ * a periodically called function (only executed if required)
  * a function called if the mouse is clicked
 
 Some nice examples of cairo snippets can be found at
@@ -28,3 +28,6 @@ Compile with
 
 Execute with
   ./application
+
+Feedback and questions are welcome
+  
