@@ -5,10 +5,12 @@
 - You can concentrate on writing your own cairo drawing in application.c
 
 Just replace the simple example with your own code
+
 - define your main window in application.h
 - Code your cairo drawing in application.c
  
 The framework provides functions
+
 - to draw using cairo
 - to initialize your code
 - to exit your code
@@ -19,20 +21,23 @@ Some nice examples of cairo snippets can be found at
   http://http://cairographics.org/samples/
 
 To compile, you need to install gtk+ with the command
+
 ```
   sudo apt-get install libgtk-3-dev
 ```
 
 Compile with
+
 ```
   make
 ```
 
 Execute with
+
 ```
   ./application
 ```
 
-Please help to improve this program by reporting any problems or suggestions to
-rene.richarz@bluewin.ch
+Please help to improve this program by by opening an issue on this repository
+if you any problems or suggestions.
   

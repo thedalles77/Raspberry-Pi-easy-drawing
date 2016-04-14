@@ -3,7 +3,7 @@
  * 
  * A simple example of using cairo with c on the Raspberry Pi
  * 
- * Copyright 2016  <rene.richarz@bluewin.ch
+ * Copyright 2016  rricharz
  * 
  * Replace the code labelled "example" with your own code
  * 
