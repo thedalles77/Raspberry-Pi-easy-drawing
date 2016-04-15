@@ -38,6 +38,6 @@ Execute with
   ./application
 ```
 
-Please help to improve this program by by opening an issue on this repository
-if you any problems or suggestions.
+Please help to improve this program by opening an issue on this repository
+if you have any problem or suggestion.
   
