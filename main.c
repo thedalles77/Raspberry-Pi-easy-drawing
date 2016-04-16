@@ -35,6 +35,7 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include <cairo.h>
 #include <gtk/gtk.h>
 
@@ -104,6 +105,10 @@ int main (int argc, char *argv[])
 
 	gtk_window_set_default_size(GTK_WINDOW(window), WINDOW_WIDTH, WINDOW_HEIGHT); 
 	gtk_window_set_title(GTK_WINDOW(window), WINDOW_NAME);
+	
+	if (strlen(ICON_NAME) > 0) {
+		gtk_window_set_icon_from_file(GTK_WINDOW(window), ICON_NAME, NULL);	
+	}
 	
 	application_init();
 
