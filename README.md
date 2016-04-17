@@ -39,6 +39,6 @@ Execute with
 ```
 
 Please help to improve this program by tweeting to
-http://twitter.com/r_richarz or opening an issue on this repository
+**http://twitter.com/r_richarz** or opening an issue on this repository
 if you have any problem or suggestion.
   
