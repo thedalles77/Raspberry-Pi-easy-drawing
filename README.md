@@ -4,6 +4,11 @@
 - No knowledge about gtk+ is required
 - You can concentrate on writing your own cairo drawing in application.c
 
+**Important!** This version creates a fresh surface each time application_draw is called.
+If you prefer the creation of a surface once at the beginning, and keep
+drawing on the same surface, use
+http://github.com/rricharz/Raspberry-Pi-easy-drawing-2 instead.
+
 Just replace the simple example with your own code
 
 - define your main window in application.h

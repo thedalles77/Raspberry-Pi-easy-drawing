@@ -12,7 +12,11 @@
  *   a function to initialize your code
  *   a function to exit your code
  *   a peridicaly called function
- *   a function called if the mouse is clicked 
+ *   a function called if the mouse is clicked
+ * 
+ * Important! This version creates a fresh surface each time application_draw is called.
+ * If you prefer the creation of a surface once at the beginning, and keep drawing
+ * on the same surface, use http://github.com/rricharz/Raspberry-Pi-easy-drawing-2 instead.
  * 
  * Copyright 2016  rricharz
  * 
