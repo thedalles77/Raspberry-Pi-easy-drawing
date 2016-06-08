@@ -46,6 +46,9 @@
 #include "main.h"
 #include "application.h"
 
+guint global_timeout_ref;
+GtkWidget *window;
+
 static void do_drawing(cairo_t *, GtkWidget *);
 
 static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr, 
@@ -57,8 +60,11 @@ static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr,
 
 static gboolean on_timer_event(GtkWidget *widget)
 {
+	g_source_remove(global_timeout_ref);     // stop timer in case application_on_timer_event takes too long
 	if (application_on_timer_event())
 	  gtk_widget_queue_draw(widget);
+	  // restart timer		
+	global_timeout_ref = g_timeout_add(TIME_INTERVAL, (GSourceFunc) on_timer_event, (gpointer) window);
 	return TRUE;
 }
 
@@ -86,7 +92,6 @@ static void do_drawing(cairo_t *cr, GtkWidget *widget)
 int main (int argc, char *argv[])
 {
 	GtkWidget *darea;
-	GtkWidget *window;
   
 	gtk_init(&argc, &argv);
 
@@ -104,7 +109,7 @@ int main (int argc, char *argv[])
 		// Add timer event
 		// Register the timer and set time in mS.
 		// The timer_event() function is called repeatedly until it returns FALSE. 
-		g_timeout_add(TIME_INTERVAL, (GSourceFunc) on_timer_event, (gpointer) window);
+		global_timeout_ref = g_timeout_add(TIME_INTERVAL, (GSourceFunc) on_timer_event, (gpointer) window);
 	}
 
 	gtk_window_set_default_size(GTK_WINDOW(window), WINDOW_WIDTH, WINDOW_HEIGHT); 
