@@ -1,4 +1,22 @@
-# Raspberry Pi easy drawing with c and cairo
+# This repo was forked from rricharz - Titled Raspberry Pi easy drawing with c and cairo
+
+I used the information to create the battery fuel gauge shown on the right side of this picture.
+
+![](Images/cairo.png)
+
+See step 14 of my Instructable at the url below for more information.
+
+https://www.instructables.com/Battery-Powered-Raspberry-Pi-in-Repurposed-Laptop/
+
+The modifications I made were: 
+ - Added my SMBus code to the application.c file. 
+ - The application.h header file was changed to make a minimal size window (see screen grab above) with a fuel gauge and SOC percentage that is updated every 5 seconds. 
+ - The main.c code and main.h header files are unmodified. 
+ - The makefile has been modified to add a link to wiringPi. 
+ - The battery symbol, "bat_icon.png" and the Battery_SOC.desktop file can be downloaded from this repo. 
+
+The informatiion below is from the rricharz repo:
+
 - Provides a simple framework for basic drawing with cairo and gtk+ 3.0
 - All gtk+ functions are hidden away in main.c
 - No knowledge about gtk+ is required
